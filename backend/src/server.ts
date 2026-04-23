@@ -8,6 +8,9 @@ import { setupSwagger } from './docs/swagger';
 import { AppDataSource } from './infrastructure/database/sqlite/connection';
 import authRoutes from './infrastructure/web/express/routes/auth.routes';
 import storeRoutes from './infrastructure/web/express/routes/store.routes';
+import productRoutes from './infrastructure/web/express/routes/product.routes';
+import cartRoutes from './infrastructure/web/express/routes/cart.routes';
+import orderRoutes from './infrastructure/web/express/routes/order.routes';
 
 const app = express();
 
@@ -34,6 +37,9 @@ app.get('/health', (req, res) => {
 // Rotas da API
 app.use('/api/auth', authRoutes);
 app.use('/api/stores', storeRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes);
 
 // Middleware de erro (sempre por último)
 app.use(errorHandler);

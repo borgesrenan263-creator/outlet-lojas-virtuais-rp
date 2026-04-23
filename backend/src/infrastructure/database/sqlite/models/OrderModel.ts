@@ -26,8 +26,8 @@ export class OrderModel {
   @Column({ name: 'payment_status', default: 'pending' })
   paymentStatus!: string;
 
-  @Column({ name: 'gateway_transaction_id', nullable: true })
-  gatewayTransactionId!: string;
+  @Column({ name: 'gateway_transaction_id', nullable: true, type: 'text' })
+  gatewayTransactionId!: string | null;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;
