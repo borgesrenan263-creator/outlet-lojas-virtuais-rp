@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+__pycache__/
+*.pyc
+
+# Banco de dados (dados sensíveis)
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Variáveis de ambiente
+.env
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
